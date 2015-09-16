@@ -1,9 +1,13 @@
-// Tests for something :
+// Tests for Ticket prototype :
 
-describe('what function I want tested', function() {
+describe("Ticket", function() {
 
-  it("description of what I want.", function() {
-    expect(something).to.equal("this");
+  it("it creates a new ticket with certain properties.", function() {
+    var testTicket = new Ticket("Rambo", "2015-09-16", "5:30pm", "$10.25");
+    expect(testTicket.title).to.equal("Rambo");
+    expect(testTicket.date).to.equal("2015-09-16");
+    expect(testTicket.time).to.equal("5:30pm");
+    expect(testTicket.price).to.equal("$10.25");
   });
 
 });

@@ -16,6 +16,7 @@ It's a very simple system for purchasing movie tickets that practices and demons
 
 * _Clone directory from "https://github.com/DillonLloydLee/Ticket_Box_Office.git"_
 * _Open the index.html file._
+* _To run tests, open the spec-runner.html file in the spec folder._
 * _That's it!  Run this program from the page and follow onscreen directions._
 
 
