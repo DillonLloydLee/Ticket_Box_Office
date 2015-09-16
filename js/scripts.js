@@ -25,7 +25,7 @@ $(document).ready(function() {
     }
     var theTime = $(this).clone();
     $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTime + "'></div></div>");
-    var theTitle = $("span").closest(".movie");
+    var theTitle = $(this.closest(".movie"));
     $(".new-title").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-title' value='" + theTitle + "'></div></div>");
 
   });
