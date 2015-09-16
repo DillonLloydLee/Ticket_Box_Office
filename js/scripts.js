@@ -12,4 +12,8 @@ function Ticket(title, date, time, price) {
 
 $(document).ready(function() {
 
+  $(".date").click(function() {
+    $(".age-question").toggle();
+  });
+
 });
