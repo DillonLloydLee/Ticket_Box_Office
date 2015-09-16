@@ -18,40 +18,50 @@ var clickSound = new Audio("sounds/button.mp3");
 
 $(document).ready(function() {
 
-  var newTime = $(".time").click(function() {
+  $(".time").click(function() {
     clickSound.play();
     if ($(".age-question").css('display') == 'none') {
       $(".age-question").toggle();
     }
-    return this;
+    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + ($(this).clone()) + "'></div></div>");
   });
 
-  var newDate = $(".date").click(function() {
+  $(".date").click(function() {
     clickSound.play();
     if ($(".movies-by-date").css('display') == 'none') {
       $(".movies-by-date").toggle();
     }
     $(".chosen-date").empty().val();
     $(".chosen-date").append($(this).clone());
-    return this;
+    $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + ($(this).clone()) + "'></div></div>");
   });
 
   $("form#new-ticket").submit(function(event) {
     clickSound.play();
     event.preventDefault();
 
-    var newName = $("input.new-name").val();
-    var newAge = $("input.new-age").val();
+    var newName = $("input#new-name").val();
+    var newAge = $("input#new-age").val();
     var newPrice = "";
     var newTitle = "";
+    var newDate = $("input#new-date").val();
+    var newTime = $("input#new-time").val();
+
+    if (newAge < 16) {
+      var newPrice = "$7.75";
+    } else if (newAge > 55) {
+      var newPrice = "$8.25";
+    } else {
+      newPrice = "9.75";
+    }
 
 
     var ticket = new Ticket(newTitle, newName, newDate, newTime, newPrice);
-    $(".new-name").append(ticket.buyerName);
-    $(".new-title").append(ticket.movieTitle);
-    $(".new-date").append(ticket.movieDate);
-    $(".new-time").append(ticket.movieTime);
-    $(".new-price").append(ticket.ticketPrice);
+    $(".final-name").append(ticket.buyerName);
+    $(".final-title").append(ticket.movieTitle);
+    $(".final-date").append(ticket.movieDate);
+    $(".final-time").append(ticket.movieTime);
+    $(".final-price").append(ticket.ticketPrice);
 
     $(".movie-data").slideToggle();
     $(".age-question").toggle();

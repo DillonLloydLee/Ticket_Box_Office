@@ -82,12 +82,22 @@
         </div>
 
         <div class="final-ticket">
-          <br><br><br><center>
-            <h3><span class="new-name"> is seeing <span class="new-title"></span>!</h3>
+          <br><br><hr><br><center>
+            <h3><span class="final-name"></span> is seeing <span class="final-title"></span>!</h3>
             <br>
-            <h4>on <span class="new-date"></span> at <span class="new-time"></span>.</h4>
+            <h4>on <span class="final-date"></span> at <span class="final-time"></span>.</h4>
             <br>
-            <h4>Price: <span class="new-price"></span></h4>
+            <h4>Price: <span class="final-price"></span></h4>
+            <br><hr>
+            <h4>Please print this and bring it to the ticket box office.<br>
+              Payment required on presentation.<br>
+              Thank you for using Dillon Lee's Online Ticket Box Office!</h4>
+            <br>
+
+            <form id="start-over">
+              <button type="submit" class="btn">Make a new ticket!</button>
+            </form>
+
           </center>
         </div>
 
@@ -101,8 +111,12 @@
           </div>
           <div class="form-group">
             <label for="new-age">Please enter your age:</label>
-            <input type="int" class="form-control" id="new-age" required>
+            <input type="number" class="form-control" id="new-age" required>
           </div>
+          <span class="new-title"></span>
+          <span class="new-time"></span>
+          <span class="new-date"></span>
+          <span class="new-price"></span>
           <button type="submit" class="btn">Submit</button>
         </form>
       </div>
