@@ -55,16 +55,34 @@ $(document).ready(function() {
       newPrice = "9.75";
     }
 
-
     var ticket = new Ticket(newTitle, newName, newDate, newTime, newPrice);
+    $(".final-name").empty().val();
     $(".final-name").append(ticket.buyerName);
+    $(".final-title").empty().val();
     $(".final-title").append(ticket.movieTitle);
+    $(".final-date").empty().val();
     $(".final-date").append(ticket.movieDate);
+    $(".final-time").empty().val();
     $(".final-time").append(ticket.movieTime);
+    $(".final-price").empty().val();
     $(".final-price").append(ticket.ticketPrice);
 
     $(".movie-data").slideToggle();
     $(".age-question").toggle();
     $(".final-ticket").slideToggle();
+  });
+
+  $("form#start-over").submit(function(event) {
+    clickSound.play();
+    event.preventDefault();
+
+    if ($(".movies-by-date").css('display') != 'none') {
+      $(".movies-by-date").toggle();
+    }
+    if ($(".age-question").css('display') != 'none') {
+      $(".age-question").toggle();
+    }
+    $(".final-ticket").toggle();
+    $(".movie-data").slideToggle();
   });
 });
