@@ -18,6 +18,9 @@ var clickSound = new Audio("sounds/button.mp3");
 
 $(document).ready(function() {
 
+
+// Clicking on a Time : 
+
   $(".time").click(function() {
     clickSound.play();
     if ($(".age-question").css('display') == 'none') {
@@ -30,6 +33,9 @@ $(document).ready(function() {
 
   });
 
+
+// Clicking on a Date :
+
   $(".date").click(function() {
     clickSound.play();
     if ($(".movies-by-date").css('display') == 'none') {
@@ -40,6 +46,9 @@ $(document).ready(function() {
     $(".chosen-date").append(theDate);
     $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + theDate + "'></div></div>");
   });
+
+
+// Final Ticket Creating Button :
 
   $("form#new-ticket").submit(function(event) {
     clickSound.play();
@@ -75,6 +84,9 @@ $(document).ready(function() {
     $(".age-question").toggle();
     $(".final-ticket").slideToggle();
   });
+
+
+// Start Over Button :
 
   $("form#start-over").submit(function(event) {
     clickSound.play();
