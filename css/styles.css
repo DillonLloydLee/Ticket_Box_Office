@@ -32,8 +32,8 @@ h2 {
   text-align: center;
 }
 
-h3.prices {
-  text-align: center;
+h3.date {
+  text-decoration: underline;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
 }
 
 .top-area {
-  height: 100px;
+  height: 10%;
   width: 100%;
   background-color: #624A19;
   color: #E7D5B0;
@@ -50,7 +50,9 @@ body {
 
 .right-area {
   width: 20%;
+  height: 88vh;
   float: right;
+  padding: 1%;
   background-color: #7C6432;
   color: #E7D5B0;
 }
@@ -58,6 +60,8 @@ body {
 .main-area {
   width: 80%;
   float: left;
+  height: 88vh;
+  padding: 1%;
   background-color: #9C8452;
   color: #E7D5B0;
 }
