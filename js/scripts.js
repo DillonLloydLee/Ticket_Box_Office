@@ -23,7 +23,11 @@ $(document).ready(function() {
     if ($(".age-question").css('display') == 'none') {
       $(".age-question").toggle();
     }
-    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + ($(this).clone()) + "'></div></div>");
+    var theTime = $(this).clone();
+    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTime + "'></div></div>");
+    var theTitle = $("span").closest(".movie");
+    $(".new-title").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-title' value='" + theTitle + "'></div></div>");
+
   });
 
   $(".date").click(function() {
@@ -31,9 +35,10 @@ $(document).ready(function() {
     if ($(".movies-by-date").css('display') == 'none') {
       $(".movies-by-date").toggle();
     }
+    var theDate = $(this).clone();
     $(".chosen-date").empty().val();
-    $(".chosen-date").append($(this).clone());
-    $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + ($(this).clone()) + "'></div></div>");
+    $(".chosen-date").append(theDate);
+    $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + theDate + "'></div></div>");
   });
 
   $("form#new-ticket").submit(function(event) {
@@ -42,8 +47,7 @@ $(document).ready(function() {
 
     var newName = $("input#new-name").val();
     var newAge = $("input#new-age").val();
-    var newPrice = "";
-    var newTitle = "";
+    var newTitle = $("input#new-title").val();
     var newDate = $("input#new-date").val();
     var newTime = $("input#new-time").val();
 
