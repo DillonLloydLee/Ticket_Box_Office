@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "movies";
+    src: url(see_you_at_the_movies.ttf);
+}
+
 #invisible {
   display: none;
 }
@@ -9,4 +14,50 @@
 
 .can-click:hover {
   text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1.title {
+  font-size: 50px;
+}
+
+h1.subtitle {
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3.prices {
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  font-family: "movies";
+}
+
+.top-area {
+  height: 100px;
+  width: 100%;
+  background-color: #624A19;
+  color: #E7D5B0;
+}
+
+.right-area {
+  width: 20%;
+  float: right;
+  background-color: #7C6432;
+  color: #E7D5B0;
+}
+
+.main-area {
+  width: 80%;
+  float: left;
+  background-color: #9C8452;
+  color: #E7D5B0;
 }

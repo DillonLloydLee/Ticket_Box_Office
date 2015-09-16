@@ -7,6 +7,7 @@ function Ticket(title, date, time, price) {
   this.price = price;
 }
 
+
 // jQuery :
 
 $(document).ready(function() {
