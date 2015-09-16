@@ -10,16 +10,27 @@ function Ticket(title, date, time, price) {
 
 // Sound effect :
 
-var pinSound = new Audio("sounds/pin_drop.mp3");
+var clickSound = new Audio("sounds/button.mp3");
 
 
 // jQuery :
 
 $(document).ready(function() {
 
+  $(".time").click(function() {
+    clickSound.play();
+    if ($(".age-question").css('display') == 'none') {
+      $(".age-question").toggle();
+    }
+  });
+
   $(".date").click(function() {
-    $(".age-question").toggle();
-    pinSound.play();
+    clickSound.play();
+    if ($(".movies-by-date").css('display') == 'none') {
+      $(".movies-by-date").toggle();
+    }
+    $(".chosen-date").empty().val();
+    $(".chosen-date").append($(this).clone());
   });
 
 });

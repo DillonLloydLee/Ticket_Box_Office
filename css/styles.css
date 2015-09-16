@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "movies";
-    src: url(see_you_at_the_movies.ttf);
+  font-family: "movies";
+  src: url(see_you_at_the_movies.ttf);
 }
 
 #invisible {
@@ -28,11 +28,15 @@ h1.subtitle {
   font-size: 20px;
 }
 
+h1.header {
+  text-decoration: underline;
+}
+
 h2 {
   text-align: center;
 }
 
-h3.date {
+h3.main {
   text-decoration: underline;
 }
 
@@ -40,6 +44,12 @@ body {
   background-color: black;
   font-family: "movies";
   color: #E7D5B0;
+}
+
+hr {
+  color: black;
+  background-color: black;
+  height: 2px;
 }
 
 .top-area {
@@ -87,4 +97,8 @@ body {
 
 button {
   color: black;
+}
+
+.movies-by-date {
+  display: none;
 }
