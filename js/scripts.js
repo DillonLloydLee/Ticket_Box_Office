@@ -19,7 +19,7 @@ var clickSound = new Audio("sounds/button.mp3");
 $(document).ready(function() {
 
 
-// Clicking on a Time : 
+// Clicking on a Time :
 
   $(".time").click(function() {
     clickSound.play();
@@ -27,9 +27,9 @@ $(document).ready(function() {
       $(".age-question").toggle();
     }
     var theTime = $(this).clone();
-    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTime + "'></div></div>");
+    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTime.text() + "'></div></div>");
     var theTitle = $(this.closest(".movie"));
-    $(".new-title").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-title' value='" + theTitle + "'></div></div>");
+    $(".new-title").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-title' value='" + theTitle.text() + "'></div></div>");
 
   });
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
     var theDate = $(this).clone();
     $(".chosen-date").empty().val();
     $(".chosen-date").append(theDate);
-    $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + theDate + "'></div></div>");
+    $(".new-date").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-date' value='" + theDate.text() + "'></div></div>");
   });
 
 
