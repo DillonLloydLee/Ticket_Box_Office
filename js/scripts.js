@@ -28,9 +28,11 @@ $(document).ready(function() {
     }
     var theTime = $(this).clone();
     $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTime.text() + "'></div></div>");
-    var theTitle = $(this.closest(".movie"));
-    $(".new-title").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-title' value='" + theTitle.text() + "'></div></div>");
+  });
 
+  $(".movie").click(function() {
+    var theTitle = $(".movie-title").clone();
+    $(".new-time").append("<div class='invisible'><div class='form-group'><input type='int' class='form-control' id='new-time' value='" + theTitle.text() + "'></div></div>");
   });
 
 
