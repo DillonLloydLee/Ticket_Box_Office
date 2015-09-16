@@ -1,0 +1,12 @@
+#invisible {
+  display: none;
+}
+
+.can-click {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.can-click:hover {
+  text-decoration: underline;
+}
