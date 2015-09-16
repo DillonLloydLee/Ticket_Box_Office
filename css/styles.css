@@ -9,11 +9,11 @@
 
 .can-click {
   cursor: pointer;
-  color: #0088cc;
 }
 
 .can-click:hover {
   text-decoration: underline;
+  color: #756A54;
 }
 
 h1 {
